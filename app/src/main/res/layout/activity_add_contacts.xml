@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.hoangcuong.com.mycontacts.addContacts">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewA"
+            android:layout_weight="0.6"
+            android:background="#607D8B"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgPerson"
+                app:srcCompat="@drawable/ic_person_black_24dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/viewB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="#F5F5F5"
+            android:orientation="vertical">
+            <include layout="@layout/item_add_contact"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabCamera"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        app:layout_anchor="@id/viewA"
+        app:layout_anchorGravity="bottom|right|end"/>
+
+</android.support.design.widget.CoordinatorLayout>
